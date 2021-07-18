@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker'
+
+import {NavLink} from 'react-router-dom'
 export const AddStudent = () => {
     const [PalyerId, setPalyerId] = useState(0);
     const [PlayerName, setPlayerName] = useState('');
@@ -18,22 +20,22 @@ export const AddStudent = () => {
                 <h4>New Player</h4>
             </div>
             <div className="col-md-6 pr-0 mb-3 text-right">
-                <button type="button" className="btn btn-info ml-2 "><i className="fa fa-list mr-1" aria-hidden="true"></i>Player List</button>
+                <NavLink type="button" className="btn btn-info ml-2 " exact to="/studentlist"><i className="fa fa-list mr-1" aria-hidden="true"></i>Player List</NavLink>
             </div>
             <div className="row mt-3">
                 <div className="col-md-6 mb-3">
-                    <label htmlFor="PlayerName" className="form-label">Player Name</label>
+                    <label htmlhtmlFor="PlayerName" className="form-label">Player Name</label>
                     <input type="text" value={PlayerName} onChange={(e) => setPlayerName(e.target.value)} className="form-control" placeholder="Player Name" />
                 </div>
                 <div className="col-md-6 mb-3">
-                    <label htmlFor="Dob" className="form-label">Date Of Birth</label>
+                    <label htmlhtmlFor="Dob" className="form-label">Date Of Birth</label>
                     <DatePicker className="form-control" 
                         value={Dob} onChange={setDob}
                     />
                     {/* <input type="text" value={Dob} onChange={(e) => setDob(e.target.value)} className="form-control" placeholder="Dob" /> */}
                 </div>
                 <div className="col-md-6 mb-3">
-                    <label htmlFor="Country" className="form-label">Country</label>
+                    <label htmlhtmlFor="Country" className="form-label">Country</label>
                     <select className="form-control form-select" value={Country} onChange={(e) => setCountry((e.target!=null?e.target.value:Country))} >
                         <option value="0">Please Select</option>
                         <option value="1">Afganisthan</option>
@@ -48,7 +50,7 @@ export const AddStudent = () => {
                     </select>
                 </div>
                 <div className="col-md-6 mb-3">
-                    <label htmlFor="Country" className="form-label">Player Type</label>
+                    <label htmlhtmlFor="Country" className="form-label">Player Type</label>
                     <select className="form-control form-select" value={PalyerType} onChange={(e) => setPalyerType(e.target.value)} >
                         <option value="0">Please Select</option>
                         <option value="1">All-Rounder</option>
@@ -58,24 +60,24 @@ export const AddStudent = () => {
                     </select>
                 </div>
                 <div className="col-md-3 mb-3">
-                    <label htmlFor="PlayerName" className="form-label">Total Match</label>
+                    <label htmlhtmlFor="PlayerName" className="form-label">Total Match</label>
                     <input type="text" value={TotalMatch} onChange={(e) => setTotalMatch(e.target.value)} className="form-control" placeholder="Total Match" />
                 </div>
                 <div className="col-md-3 mb-3">
-                    <label htmlFor="PlayerName" className="form-label">Total Run</label>
+                    <label htmlhtmlFor="PlayerName" className="form-label">Total Run</label>
                     <input type="text" value={TotalRun} onChange={(e) => setTotalRun(e.target.value)} className="form-control" placeholder="Total Run" />
                 </div>
                 <div className="col-md-3 mb-3">
-                    <label htmlFor="PlayerName" className="form-label">Total Century</label>
+                    <label htmlhtmlFor="PlayerName" className="form-label">Total Century</label>
                     <input type="text" value={TotalCentury} onChange={(e) => setTotalCentury(e.target.value)} className="form-control" placeholder="Total Century" />
                 </div>
                 <div className="col-md-3 mb-3">
-                    <label htmlFor="PlayerName" className="form-label">Total Fifty</label>
+                    <label htmlhtmlFor="PlayerName" className="form-label">Total Fifty</label>
                     <input type="text" value={TotalFifty} onChange={(e) => setTotalFifty(e.target.value)} className="form-control" placeholder="Total Fifty" />
                 </div>
                 <hr />
-                <div className="col-md-12 mb-3 text-right">
-                    <button type="button" className="btn btn-primary ml-2 mr-2">Save</button>
+                <div className="col-md-12 mb-3 pr-0 text-right">
+                    <button type="button" className="btn btn-primary mr-2">Save</button>
                     <button type="button" className="btn btn-danger">Cancel</button>
                 </div>
             </div>
