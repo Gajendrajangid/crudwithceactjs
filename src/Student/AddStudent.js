@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import DatePicker from 'react-date-picker';
+import 'react-date-picker/dist/DatePicker'
 export const AddStudent = () => {
     const [PalyerId, setPalyerId] = useState(0);
     const [PlayerName, setPlayerName] = useState('');
@@ -21,11 +22,14 @@ export const AddStudent = () => {
                 </div>
                 <div className="col-md-6 mb-3">
                     <label htmlFor="Dob" className="form-label">Date Of Birth</label>
-                    <input type="text" value={Dob} onChange={(e) => setDob(e.target.value)} className="form-control" placeholder="Dob" />
+                    <DatePicker className="form-control" 
+                        value={Dob} onChange={setDob}
+                    />
+                    {/* <input type="text" value={Dob} onChange={(e) => setDob(e.target.value)} className="form-control" placeholder="Dob" /> */}
                 </div>
                 <div className="col-md-6 mb-3">
                     <label htmlFor="Country" className="form-label">Country</label>
-                    <select className="form-control form-select" value={Country} onChange={(e) => setCountry(e.target.value)} >
+                    <select className="form-control form-select" value={Country} onChange={(e) => setCountry((e.target!=null?e.target.value:Country))} >
                         <option value="0">Please Select</option>
                         <option value="1">Afganisthan</option>
                         <option value="2">Australia</option>
@@ -66,8 +70,8 @@ export const AddStudent = () => {
                 </div>
                 <hr />
                 <div className="col-md-12 mb-3 text-right">
-                    <button type="button" class="btn btn-primary ml-2 mr-2">Save</button>
-                    <button type="button" class="btn btn-danger">Cancel</button>
+                    <button type="button" className="btn btn-primary ml-2 mr-2">Save</button>
+                    <button type="button" className="btn btn-danger">Cancel</button>
                 </div>
             </div>
         </div>
