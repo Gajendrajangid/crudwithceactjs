@@ -1,5 +1,6 @@
 import React from 'react'
 
+import {NavLink} from 'react-router-dom'
 export const StudentList = () => {
     return (
         <div className="row mt-3">
@@ -7,9 +8,9 @@ export const StudentList = () => {
                 <h4>Player List</h4>
             </div>
             <div className="col-md-6 mb-3 text-right">
-                <button type="button" className="btn btn-info ml-2 mr-2"><i className="fa fa-plus mr-1" aria-hidden="true"></i>New Player</button>
+                <NavLink type="button" className="btn btn-info ml-2 mr-2" exact to="/addstudent"><i className="fa fa-plus mr-1" aria-hidden="true"></i>New Player</NavLink>
             </div>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr className="table-danger">
                         <th scope="col">#</th>
