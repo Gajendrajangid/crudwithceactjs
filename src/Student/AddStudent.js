@@ -14,7 +14,12 @@ export const AddStudent = () => {
 
     return (
         <div className="row col-md-8 mt-2">
-            <h4>Player Regestration</h4>
+            <div className="col-md-6 pl-0 mb-3">
+                <h4>New Player</h4>
+            </div>
+            <div className="col-md-6 pr-0 mb-3 text-right">
+                <button type="button" className="btn btn-info ml-2 "><i className="fa fa-list mr-1" aria-hidden="true"></i>Player List</button>
+            </div>
             <div className="row mt-3">
                 <div className="col-md-6 mb-3">
                     <label htmlFor="PlayerName" className="form-label">Player Name</label>
