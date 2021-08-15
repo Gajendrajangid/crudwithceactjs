@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom'
 import logo from '../logo.svg';
 const Header = () => {
     const logoastyle={
-        "margin-top": "-18px",
-        "margin-bottom": "-18px"
+        "marginTop": "-18px",
+        "marginBottom": "-18px"
     }
     const logoimgstyle={
         "maxHeight": "82px",
@@ -27,7 +27,7 @@ const Header = () => {
                             <NavLink className="nav-link text-white" aria-current="page" exact to="/about">AboutUs</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link text-white" aria-current="page" exact to="/studentlist">Player</NavLink>
+                            <NavLink className="nav-link text-white" aria-current="page" exact to="/playerlist">Player</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link text-white" aria-current="page" exact to="/contact">ContactUs</NavLink>
